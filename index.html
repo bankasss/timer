@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'tue3bqp',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+  </head>
+  <body>
+    <div class="tutumi">
+      <header>
+        <h1>ら～めんタイマ～</h1>
+        <div id="nav-drawer">
+          <input id="nav-input" type="checkbox" class="nav-unshown">
+          <label id="nav-open" for="nav-input"><span></span></label>
+          <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+          <div id="nav-content">
+            <h3>Q.だれ？</h3>
+            <p>A.バーチャルゆめかわファッションモデルの来瞳キューモと申します₍ᐢ⑅•ᴗ•⑅ᐢ₎♡</p><br>
+            <p>このタイマーは来瞳のこと大好きなプロデューサーが勝手につくった！</p>
+            <a href="https://twitter.com/kcuumo" id="nozo">Twitterを覗く</a>
+            <h3>Q.ぼく（わたし）もタイマーつくってみたい！</h3>
+            <p>A.githubでソースコード置いてるのでご自由にどうぞ。かなり汚いので、きれいにしたソースコードをどなたか公開してくださると泣いて喜びます。（画像は使っちゃだめだよ）</p>
+            <a href="https://twitter.com/kcuumo" id="nozo">コードをみる</a>
+          </div>
+        </div>
+        <a href="#"><img src="icon.png" alt="" id="zure"></a>
+      </header>
+    <div class="item html">
+       <h2>0</h2>
+       <svg width="160" height="160" xmlns="http://www.w3.org/2000/svg">
+         <defs>
+    <linearGradient id="sample">
+      <stop offset="0%"   stop-color="#FCC1CB" />
+      <stop offset="100%" stop-color="#8FEBF7" />
+    </linearGradient>
+    </defs>
+        <g>
+         <title>Layer 1</title>
+         <circle id="circle" class="circle_animation" r="69.85699" cy="81" cx="81" stroke-width="8" stroke="url(#sample)" fill="none" text-anchor="middle"/>
+        </g>
+       </svg>
+     </div>
+     <img src="main.gif" alt="" class="main">
+     <br><br><br><br>
+  <ul>
+    <li id="button1"><img src="1.png" alt="">3分version</li>
+    <li id="button2"><img src="2.png" alt="">4分version</li>
+    <li id="button3"><img src="3.png" alt="">10秒version</li>
+  </ul>
+  <footer>来瞳キューモのら～めんたいま～</footer>
+  </div>
+  </body>
+  <script type="text/javascript">
+    document.getElementById("button1").onclick = function(){
+      var time = 181; /* how long the timer runs for */
+      var i =180
+      var initialOffset = '440';
+      var interval = setInterval(function() {
+       $('.circle_animation').css('stroke-dashoffset', initialOffset-(i*(initialOffset/time)));
+       $('h2').text("あと"+i+"秒");
+       if (i==0) {
+           clearInterval(interval);
+            // $('.circle_animation').css('stroke-dashoffset',440);
+            $('h2').text("おわり");
+
+     }
+             i--;
+      }, 1000);}
+      document.getElementById("button2").onclick = function(){
+        var time = 241; /* how long the timer runs for */
+        var i =240
+        var initialOffset = '440';
+        var interval = setInterval(function() {
+         $('.circle_animation').css('stroke-dashoffset', initialOffset-(i*(initialOffset/time)));
+         $('h2').text("あと"+i+"秒");
+         if (i==0) {
+             clearInterval(interval);
+              // $('.circle_animation').css('stroke-dashoffset',440);
+              $('h2').text("おわり");
+
+       }
+               i--;
+        }, 1000);}
+        document.getElementById("button3").onclick = function(){
+          var time = 11; /* how long the timer runs for */
+          var i =10
+          var initialOffset = '440';
+          var interval = setInterval(function() {
+           $('.circle_animation').css('stroke-dashoffset', initialOffset-(i*(initialOffset/time)));
+           $('h2').text("あと"+i+"秒");
+           if (i==0) {
+               clearInterval(interval);
+                // $('.circle_animation').css('stroke-dashoffset',440);
+                $('h2').text("おわり");
+
+         }
+                 i--;
+          }, 1000);}
+  </script>
+</html>
