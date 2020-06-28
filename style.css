@@ -6,6 +6,10 @@ body{
   width: 100%;
   overflow-x: hidden;
 }
+::selection {
+    background: #fbc1cb;;
+    color: #fff;
+}
 div#nav-content {
     padding: 3em;
 }
